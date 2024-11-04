@@ -1,0 +1,9 @@
+h2  {font-size : 14pt;
+     color     : blue}
+
+tr  {font-size : 12pt;
+     color     : green;}
+
+tr.tab_title {font-size  : 12pt;
+              font-weight : bold;
+              color       : red}

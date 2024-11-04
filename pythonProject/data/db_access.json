@@ -1,0 +1,4 @@
+{
+    "manager": ["auth_bp", "requests_func"],
+    "admin": ["auth_bp"]
+}

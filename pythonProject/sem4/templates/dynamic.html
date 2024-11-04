@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <h2>{{ prod_title }}</h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sem1.css') }}">
+</head>
+<body>
+    <div class="table-container">
+        <table class="styled-table">
+            <thead>
+                <tr class="tab_title">
+                    <th>Название</th>
+                    <th>Единица измерения</th>
+                    <th>Цена</th>
+                    <th>Категория</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product[1] }}</td>
+                    <td>{{ product[2] }}</td>
+                    <td>{{ product[3] }}</td>
+                    <td>{{ product[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <br>
+        <form method="POST" action="/requests">
+            <input type="submit" value="К запросам" class="btn-submit">
+        </form>
+
+        <br>
+        <form method="POST" action="/back_to_main">
+            <input type="submit" value="Назад в главное меню" class="btn-submit">
+        </form>
+
+    </div>
+</body>
+</html>

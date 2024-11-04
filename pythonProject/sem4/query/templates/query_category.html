@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sem1.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Выбор категории</h2>
+        <form method="POST" action="{{url_for('query_bp.query_category')}}">
+            <div class="form-group">
+                <label for="category">Категория:</label>
+                <input type="text" id="category" name="category" required>
+            </div>
+            <input type="submit" value="Применить" class="btn-submit">
+        </form>
+
+        <form method="POST" action="/requests">
+            <input type="submit" value="К запросам" class="btn-submit">
+        </form>
+    </div>
+</body>
+</html>

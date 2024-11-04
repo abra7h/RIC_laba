@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic</title>
+    <style>
+        h2 {font-family : 'Verdana';
+            font-size   : 14pt;
+            font-weight : bold;
+            color       : blue}
+
+        ul {font-size  : 12pt;
+            color      : green;
+            display    : inline-block;
+            text-align : left}
+    </style>
+    <link href="{{url_for('static', filename='sem1.css')}}" rel="stylesheat" type="text/css">
+</head>
+<body>
+<center>
+    <h2>{{prod_title}}</h2>
+    <table border="1">
+        <tr class="tab_title">
+            <td>Название</td>
+            <td>Единица измерения</td>
+            <td>Цена</td>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{product['prod_name']}}</td>
+            <td>{{product['prod_measure']}}</td>
+            <td>{{product['prod_price']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>

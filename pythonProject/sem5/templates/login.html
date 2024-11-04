@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<center>
+    <div class="login-container">
+        <h2>Авторизация</h2>
+        <form method="POST" action="{{ url_for('auth_bp.auth_index') }}">
+            <div class="form-group">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+
+
+
+            <input type="submit" value="Войти" class="btn-submit">
+            <br>
+            <br>
+            <p>{{error}}</p>
+        </form>
+    </div>
+    <form method="POST" action="/back_to_main">
+        <input type="submit" value="Назад в главное меню" class="btn-submit">
+    </form>
+</center>
+</body>
+</html>

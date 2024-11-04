@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+<center>
+    <div class="requests">
+        <h2 style="text-align: center;">Запросы</h2>
+        <p>
+            <a class="menu-link" href="{{url_for('query_bp.query_category')}}">Найти продукты категории</a>
+        </p>
+        <p>
+            <a class="menu-link" href="{{url_for('query_bp.query_cost')}}">Найти продукты определенной цены</a>
+        </p>
+        <br>
+
+         <form method="POST" action="/back_to_main">
+             <input type="submit" value="Назад в главное меню" class="btn-submit">
+         </form>
+    </div>
+</center>
+
+</body>
+</html>

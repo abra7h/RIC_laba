@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <span class="navbar-message">{{message}}</span>
+        </div>
+    </nav>
+<center>
+    <div class="container main-content">
+        <h2>Главное меню пользователей</h2>
+        <p>
+            <a class="menu-link" href="{{url_for('requests_func')}}">Работа с запросами</a>
+        </p>
+        <p>
+            <a class="menu-link" href="{{url_for('auth_bp.auth_index')}}">Авторизация</a>
+        </p>
+        <p>
+            <a class="menu-link exit-link" href="{{url_for('exit_func')}}">Выход из системы</a>
+        </p>
+        <p>
+            <a class="menu-link logout-link" href="{{url_for('logout_func')}}">Выйти из аккаунта</a>
+        </p>
+    </div>
+</center>
+</body>
+</html>
